@@ -26,3 +26,13 @@ Name: Old Package
 Author: Reposi3 <reposithree@gmail.com>
 Depiction: https://supermamon.github.io/Reposi3/depictions/?p=com.supermamon.oldpackage
 
+Package: com.norwagov.norwagov
+Version: 1.0.0-1
+Section: Tweaks
+Maintainer: Piotr Gawron <norwagov43@gmail.com>
+Depends: firmware (<5.0)
+Architecture: iphoneos-arm
+Filename: ./debs/norwagov_0.0.1-2+debug_iphoneos-arm.deb
+Size: 436
+Description: SussyBaka
+

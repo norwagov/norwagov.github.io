@@ -1,0 +1,9 @@
+Package: norwagov
+Name: norwagov
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: An awesome application!
+Maintainer: Piotr Gawron
+Author: Piotr Gawron
+Section: Utilities
+Depends: ${LIBSWIFT}

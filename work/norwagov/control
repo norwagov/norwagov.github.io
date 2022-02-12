@@ -1,8 +1,9 @@
-Package: com.nanosoft.norwagov
-Name: norwagov
+Package: com.phillipt.unlockchanger
+Name: UnlockChanger
+Depends: mobilesubstrate
 Version: 0.0.1
 Architecture: iphoneos-arm
-Description: Testowy tweak norgiego!
-Maintainer: Piotr Gawron
-Author: Piotr Gawron
+Description: Tweak which changes your ‘slide to unlock’ text
+Maintainer: Phillip Tennen
+Author: Phillip Tennen
 Section: Tweaks
