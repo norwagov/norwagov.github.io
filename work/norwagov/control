@@ -1,0 +1,8 @@
+Package: com.nanosoft.norwagov
+Name: norwagov
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Testowy tweak norgiego!
+Maintainer: Piotr Gawron
+Author: Piotr Gawron
+Section: Tweaks
