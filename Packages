@@ -34,5 +34,8 @@ Depends: firmware (<5.0)
 Architecture: iphoneos-arm
 Filename: ./debs/norwagov_0.0.1-2+debug_iphoneos-arm.deb
 Size: 436
+MD5sum: 8ad484126724077abbe733708063234a
 Description: SussyBaka
+Name: norwagov
+Author: Piotr Gawron <norwagov43@gmail.com>
 
