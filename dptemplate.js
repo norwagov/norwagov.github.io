@@ -8,12 +8,12 @@ var template = ' \
 <link rel="shortcut icon" href=""> \
 <meta name="robots" content="index,follow"> \
 <!--<meta http-equiv="cache-control" content="no-cache">--> \
-<title>H6nry\'s Cydia repo</title> \
+<title>norwagov repo</title> \
 </head> \
 <body text="#000000" link="#404040" alink="#404040" vlink="#404040" style="background:none;"> \
  \
 <div align="center" style="background-color:#77ffff"> \
-<h1>H6nry\'s Repo</h1> \
+<h1>norwagov sussy repo</h1> \
 </div> \
  \
 <div align="center" style="background-color:#FFFFFF;"> \
@@ -24,9 +24,8 @@ var template = ' \
 ' + content + '\
 </div> \
 <hr> \
-<h3><a href="https://twitter.com/H6nry_/" target="_blank">Me on Twitter: H6nry_</a><br> \
-<a href="https://github.com/H6nry/" target="_blank">Me on Github: H6nry</a><br> \
-<a href="http://h6nry.github.io/" target="_blank">My Website</a></h3> \
+<h3><a href="https://twitter.com/norwagov360/" target="_blank">Me on Twitter: norwagov360</a><br> \
+<a href="http://norwagov.github.io/" target="_blank">My Website</a></h3> \
 </td> \
 \
 </tr> \
