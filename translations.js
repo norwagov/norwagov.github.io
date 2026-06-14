@@ -69,7 +69,7 @@ const TRANSLATIONS = {
     exp1_desc:    "-",
     exp2_period:  "2022 — 2026",
     exp2_role:    "Akademickie Liceum Ogólnokształcące Politechniki Wrocławskiej",
-    exp2_company: "Uczeń na kierunki matematyczno-fizyczno-informatycznym.",
+    exp2_company: "Uczeń na kierunku matematyczno-fizyczno-informatycznym.",
     exp2_desc:    "<b>Wyniki maturalne pojawią się w połowie lipca pod <a href='matura.html'>tym linkiem</href></b>",
     // PROJECTS SECTION
     proj_label: "Realizacje",
