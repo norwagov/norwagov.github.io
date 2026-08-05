@@ -12,12 +12,16 @@ const TRANSLATIONS = {
 
     // NAV
     nav_logo:        "Piotr Gawron Portfolio",
+    nav_logo_opyleo: "Cofnij",
     nav_about:       "O mnie",
-    nav_skills:      "Umiejętności",
+    nav_skills:      "Umiejętności",    
     nav_experience:  "Doświadczenie",
     nav_projects:    "Projekty",
     nav_contact:     "Kontakt",
     nav_back:        "Wróć do projektów",
+
+    nav_logo_gesly: "Cofnij",
+    gesly_desc: "<br>Gesly miał być komunikatorem P2P, dzięki któremu użytkownicy mogliby się porozumiewać bez potrzeby połączenia do serwera. Projekt został porzucony, ale <a href='https://github.com/NanosoftTeam/gesly/tree/main/utils'>kod</a> dalej można przeglądać.",
 
     // HERO
     hero_label:    "CV - Portfolio",
@@ -39,20 +43,22 @@ const TRANSLATIONS = {
     skill_linux_name:   "Linux",
     skill_linux_desc:   "Umiem zarządzać systemem Linux, obsługiwać terminal z wysoką skutecznością w rozwiązywaniu problemów z systemem.",
     skill_webdev_name:  "Programowanie webowe",
-    skill_webdev_desc:  "Miałem styczność z frameworkami takimi jak Astro, Laravel, Flask. <br>Zdecydowanie lepiej jednak idzie mi wdrażanie wyglądu strony niż backend ",
+    skill_webdev_desc:  "Miałem styczność z frameworkami takimi jak Astro, Laravel, Flask. <br>Zdecydowanie lepiej jednak idzie mi wdrażanie wyglądu strony niż backend.",
     skill_webproj_name:    "Figma <i>(Projektowanie stron)</i>",
-    skill_webproj_desc:    "Umiem obsługiwać Figmę i tworzyć projekty graficzne stron internetowych. Lubię to robić i uważam,<br>że idzie mi to całkiem nieźle.",
+    skill_webproj_desc:    "Umiem obsługiwać Figmę i tworzyć projekty graficzne stron internetowych.",
     skill_reveng_name:        "Podstawy Reverse Engineeringu",
-    skill_reveng_desc:        "Interesuję się tym, jak działają programy. Ciekawi mnie działanie procesora i rejestrów. Potrafię w podstawowym stopniu obsługiwać <b>Ghidrę</b> i <b>IDĘ Free</b> w celu analizy kodu napisanego w <b>C/Objective-C/C++</b>.",
+    skill_reveng_desc:        "Traktuję to bardziej, jako pasję. Interesuję się tym, jak działają programy i ciekawi mnie działanie procesora i rejestrów. Potrafię w podstawowym stopniu obsługiwać <b>Ghidrę</b> i <b>IDĘ Free</b> w celu analizy kodu napisanego w <b>C/Objective-C/C++</b>.",
     skill_git_name:        "Git i Github",
-    skill_git_desc:        "Swobodnie poruszam się w tym środowisku i używam go praktycznie codziennie, ale wciąż nie znam wszystkich jego możliwości.",
+    skill_git_desc:        "Swobodnie poruszam się w tym środowisku i używam go praktycznie codziennie.",
     skill_program_name:       "Programowanie",
-    skill_program_desc:       "Nie ma programisty bez języka programowania. Najlepiej czuję się w <b>C++'ie i Pythonie</b>, choć wciąż często sięgam po pomoc z internetu, ale hej!<br>Przecież każdy tak robi 😄. W ten sposób sie uczymy!",
-    skill_gbde_desc:       "Umiem posługiwać się <b>językiem angielskim</b> w stopniu zaawansowanym (choć mówienie to jeszcze muszę poćwiczyć). Cokolwiek robię na komputerze, zawsze używam angielskiego.<br><b>Język niemiecki</b> umiem zdcydowanie słabiej, ale nie powinno być u mnie problemu ze zrozumieniem tekstu dotyczącego moich zainteresowań, albo branży. Rozumiem również wiele instrukcji, czy dokumentacji napisanych po niemiecku.",
-    skill_cnfi_desc:       "Od bardzo dawna interesuję się Chinami i <b>językiem chińskim</b>. Miałem do niego wiele podejść przerywanych głownie utratą motywacji, ale teraz sie nie poddam! Aktualnie mój poziom oscyluje między <b>HSK2</b> a <b>HSK3</b>.<br><b>Język fiński</b> również bardzo mi się podoba ze względu na jego brzmienie. Uczyłem się go przez rok i uważam, że umiem go na poziomie A2.",  
+    skill_program_desc:       "Sprawnie posługuję się językami <b>Python</b> i <b>C++</b>.<br>W ramach ćwiczeń, staram się rozwiązywać problemy na <a href='https://leetcode.com/u/norwagov/'>LeetCode</a>.",
+    skill_gbde_desc:       "Umiem posługiwać się <b>językiem angielskim</b> w stopniu zaawansowanym. <br><b>Język niemiecki</b> umiem zdcydowanie słabiej, ale nie powinno być u mnie problemu ze zrozumieniem tekstu dotyczącego moich zainteresowań, albo branży. Rozumiem również wiele instrukcji, czy dokumentacji napisanych po niemiecku.",
+    skill_cnfi_desc:       "<b>Języka fińskiego</b> uczę się od <i>czerwca 2025</i> roku i umiem go na tyle, aby porozumieć się w nieco wyższym stopniu niż podstawowym. Długa droga nauki przede mną, ale szybko progresuję i mam doświadczenie w uczeniu się jezyków.",  
 
     skill_projS_name: "Zarzadzanie projektem",
     skill_projS_desc: "Umiejętności zarządzania projektami, w tym planowanie i wydzielanie ról. Mając wizję sądzę, że potrafię przekazać ją współpracownikom i przekonać ich do niej.",
+
+    opyleo_desc: "<br>Jest to (niestety już nieistniejąca) strona internetowa, na której ludzie mogli kupować książki. Moim zadaniem było przeprojektowanie jej wyglądu. Aby zobaczyć efekt naszej pracy (backendem zajmowali się współpracownicy), wystarczy wejść na <a href='https://grzes-business.github.io/Opyleo-Landing-Page/'>tę stronę</a>, zbadać element i zmniejszyć rozmiar okna przeglądarki mniej więcej do rozmiaru smartfona, jako że strona była projektowana na urządzenia mobilne.",
 
     skill_asertS_name: "Asertywność",
     skill_asertS_desc: "Umiem powiedzieć <b>'nie'</b> i nie mam problemu z wyrażaniem swojego zdania, nawet jeśli jest ono zupełnie inne niz zdanie innych.<br>Warto jednak pamietać, że podczas pracy nad czymś, czego nie do końca znamy, lepiej jest posłuchać osób bardziej wykwalifikowanych.",
@@ -64,20 +70,20 @@ const TRANSLATIONS = {
     exp_label: "Historia zawodowa i edukacyjna",
     exp_title: "Doświadczenie i szkoły",
     exp1_period:  "2026 — obecnie",
-    exp1_role:    "Czekam na wyniki rekrutacji na studia.",
-    exp1_company: "-",
-    exp1_desc:    "-",
+    exp1_role:    "Politechnika Wrocławska - Wydział Informatyki i Telekomunikacji",
+    exp1_company: "Informatyka Stosowana",
+    exp1_desc:    "",
     exp2_period:  "2022 — 2026",
     exp2_role:    "Akademickie Liceum Ogólnokształcące Politechniki Wrocławskiej",
     exp2_company: "Uczeń na kierunku matematyczno-fizyczno-informatycznym.",
-    exp2_desc:    "<b>Wyniki maturalne pojawią się w połowie lipca pod <a href='matura.html'>tym linkiem</href></b>",
+    exp2_desc:    "",
     // PROJECTS SECTION
     proj_label: "Realizacje",
     proj_title: "Projekty",
     proj1_title: "Opyleo - Przeprojektowanie wyglądu strony internetowej",
     proj1_desc:  "<i>gru 2024–kwi 2025</i>",
     proj2_title: "Gesly - Komunikator P2P",
-    proj2_desc:  "<i>Obecnie</i>",
+    proj2_desc:  "<i>Porzucony</i>",
 
     // CONTACT SECTION
     contact_label:    "Napisz do mnie",
@@ -85,7 +91,9 @@ const TRANSLATIONS = {
     contact_subtitle: "Otwarty na nowe wyzwania i ciekawe projekty.",
 
     // FOOTER
-    footer: "Piotr Gawron - Portfolio",
+    footer: "Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w tym dokumencie na potrzeby obecnych i przyszłych procesów rekrutacyjnych, zgodnie z rozporządzeniem (UE) 2016/679 (RODO).",
+
+// I hereby give consent for my personal data included in this document to be processed for the purposes of current and future recruitment processes, in accordance with Regulation (EU) 2016/679 (GDPR).
 
     // ── SUBPAGE (projekt-shopflow.html) ──────────────────────
     sub_breadcrumb_portfolio: "Portfolio",
@@ -142,6 +150,10 @@ const TRANSLATIONS = {
     sub_cta_subtitle: "Chętnie porozmawiam o Twoich potrzebach.",
     sub_cta_github:   "🐙 GitHub",
     sub_cta_contact:  "✉ Napisz do mnie",
+
+    kurs_title: "Kursy i certyfikaty",
+    kurs1_title: "Tu pojawią się kursy",
+    kurs1_desc: "i cerytfikaty.",
   },
 
   // ── ENGLISH ───────────────────────────────────────────────

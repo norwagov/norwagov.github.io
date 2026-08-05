@@ -3,449 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — Jan Kowalski</title>
+  <title>Portfolio — Piotr Gawron</title>
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"
   />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --navy:      #0d3558;
-      --mid:       #1a5c99;
-      --sky:       #4a9fd4;
-      --glass-bg:  rgba(255,255,255,0.28);
-      --glass-border: rgba(255,255,255,0.65);
-      --glass-shadow: 0 8px 32px rgba(10,50,100,0.22), 0 1.5px 0 rgba(255,255,255,0.7) inset;
-      --text-dark:  #0d2640;
-      --text-light: #3d7ab5;
-      --radius:     14px;
-      --radius-sm:  8px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Segoe UI', 'Trebuchet MS', Arial, sans-serif;
-      background: linear-gradient(160deg, #b8d9f5 0%, #e4f1ff 40%, #c5dff7 70%, #a6cef0 100%);
-      min-height: 100vh;
-      color: var(--text-dark);
-      line-height: 1.6;
-      position: relative;
-    }
-
-    body::before, body::after {
-      content: '';
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(80px);
-      pointer-events: none;
-      z-index: 0;
-    }
-    body::before {
-      width: 700px; height: 700px;
-      top: -200px; left: -200px;
-      background: radial-gradient(circle, rgba(100,180,255,0.35) 0%, transparent 70%);
-    }
-    body::after {
-      width: 600px; height: 600px;
-      bottom: -150px; right: -150px;
-      background: radial-gradient(circle, rgba(150,210,255,0.3) 0%, transparent 70%);
-    }
-
-    /* GLASS */
-    .glass {
-      background: var(--glass-bg);
-      backdrop-filter: blur(18px) saturate(1.4);
-      -webkit-backdrop-filter: blur(18px) saturate(1.4);
-      border: 1.5px solid var(--glass-border);
-      border-radius: var(--radius);
-      box-shadow: var(--glass-shadow);
-      position: relative;
-      overflow: hidden;
-    }
-    .glass::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 48%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.10) 100%);
-      border-radius: var(--radius) var(--radius) 60% 60% / var(--radius) var(--radius) 30px 30px;
-      pointer-events: none;
-      z-index: 1;
-    }
-    .glass > * { position: relative; z-index: 2; }
-
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 0 5vw;
-    }
-    .nav-inner {
-      max-width: 1100px;
-      margin: 12px auto 0;
-      background: rgba(10, 40, 90, 0.55);
-      backdrop-filter: blur(22px) saturate(1.6);
-      -webkit-backdrop-filter: blur(22px) saturate(1.6);
-      border: 1.5px solid rgba(160,210,255,0.4);
-      border-radius: 50px;
-      box-shadow: 0 4px 24px rgba(5,30,70,0.3), 0 1px 0 rgba(255,255,255,0.4) inset;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 28px;
-      height: 56px;
-      position: relative;
-      overflow: hidden;
-    }
-    .nav-inner::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 50%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, transparent 100%);
-      border-radius: 50px 50px 0 0;
-      pointer-events: none;
-    }
-    .nav-logo {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #e8f4ff;
-      letter-spacing: 0.04em;
-      text-shadow: 0 1px 6px rgba(0,80,180,0.5);
-      text-decoration: none;
-    }
-    .nav-links { display: flex; gap: 6px; list-style: none; }
-    .nav-links a {
-      display: block;
-      padding: 6px 18px;
-      border-radius: 30px;
-      color: #c8e4ff;
-      font-size: 0.88rem;
-      font-weight: 500;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      transition: background 0.2s, color 0.2s;
-    }
-    .nav-links a:hover { background: rgba(255,255,255,0.15); color: #fff; }
-
-    /* LAYOUT */
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 100px 5vw 60px;
-      position: relative;
-      z-index: 1;
-    }
-    section { margin-bottom: 60px; }
-
-    .section-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--sky);
-      text-shadow: 0 0 12px rgba(74,159,212,0.5);
-      margin-bottom: 10px;
-    }
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 28px;
-      text-shadow: 0 1px 0 rgba(255,255,255,0.7);
-    }
-    
-    .skills-subtitle {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--mid);
-      margin: 30px 0 16px;
-      text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-    }
-
-    /* HERO — fixed two-column layout */
-    #hero {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: 40px;
-      padding: 52px 52px 48px;
-      margin-bottom: 60px;
-    }
-    .hero-left { flex: 1; min-width: 0; }
-    .hero-name {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.1;
-      text-shadow: 0 2px 0 rgba(255,255,255,0.6);
-      letter-spacing: -0.01em;
-    }
-    .hero-role {
-      font-size: 1.15rem;
-      color: var(--mid);
-      font-weight: 400;
-      margin: 14px 0 12px;
-    }
-    .hero-tagline {
-      font-size: 0.95rem;
-      color: var(--text-light);
-      max-width: 480px;
-      line-height: 1.7;
-    }
-    .hero-buttons {
-      display: flex;
-      gap: 12px;
-      margin-top: 28px;
-      flex-wrap: wrap;
-    }
-
-    /* BUTTONS */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 26px;
-      border-radius: 30px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      border: none;
-      transition: all 0.18s;
-      position: relative;
-      overflow: hidden;
-      letter-spacing: 0.02em;
-    }
-    .btn::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 50%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, transparent 100%);
-      border-radius: 30px 30px 0 0;
-      pointer-events: none;
-    }
-    .btn-primary {
-      background: linear-gradient(180deg, #5ab0e8 0%, #1a6fbf 50%, #1260aa 100%);
-      color: #fff;
-      box-shadow: 0 4px 16px rgba(20,90,190,0.4), 0 1px 0 rgba(255,255,255,0.5) inset;
-      border: 1px solid rgba(40,100,200,0.6);
-    }
-    .btn-primary:hover {
-      background: linear-gradient(180deg, #70c0f5 0%, #2280d0 50%, #1870bb 100%);
-      box-shadow: 0 6px 22px rgba(20,90,190,0.5);
-      transform: translateY(-1px);
-    }
-    .btn-secondary {
-      background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(200,230,255,0.5) 100%);
-      color: var(--navy);
-      box-shadow: 0 3px 12px rgba(10,50,120,0.18), 0 1px 0 rgba(255,255,255,0.8) inset;
-      border: 1.5px solid rgba(100,170,230,0.5);
-    }
-    .btn-secondary:hover {
-      background: linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(210,238,255,0.7) 100%);
-      transform: translateY(-1px);
-    }
-
-    /* SKILLS */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .skill-card { padding: 26px 28px; }
-    .skill-icon { font-size: 2rem; margin-bottom: 12px; display: block; }
-    .skill-name { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
-    .skill-desc { font-size: 0.88rem; color: var(--text-light); line-height: 1.6; }
-    .skill-bar-wrap {
-      margin-top: 14px; height: 10px;
-      background: rgba(100,160,220,0.2);
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.5);
-      overflow: hidden;
-    }
-    .skill-bar {
-      height: 100%; border-radius: 10px;
-      background: linear-gradient(90deg, #5ab0e8 0%, #2070c0 100%);
-      box-shadow: 0 0 8px rgba(80,160,230,0.6);
-      position: relative;
-    }
-    .skill-bar::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 50%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.4) 0%, transparent 100%);
-    }
-
-    /* TIMELINE */
-    .timeline { display: flex; flex-direction: column; gap: 20px; }
-    .timeline-item {
-      padding: 28px 32px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0 24px;
-      align-items: start;
-    }
-    .timeline-dot {
-      width: 14px; height: 14px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #7bc5f0, #2070c0);
-      border: 2px solid rgba(255,255,255,0.8);
-      box-shadow: 0 0 10px rgba(80,160,230,0.6);
-      margin-top: 6px; flex-shrink: 0;
-    }
-    .timeline-period {
-      font-size: 0.78rem; font-weight: 600;
-      letter-spacing: 0.08em; color: var(--sky);
-      text-transform: uppercase; margin-bottom: 4px;
-    }
-    .timeline-role { font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
-    .timeline-company { font-size: 0.9rem; color: var(--text-light); margin-bottom: 10px; }
-    .timeline-desc { font-size: 0.88rem; color: var(--text-dark); line-height: 1.7; opacity: 0.85; }
-
-    /* PROJECTS */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    .project-card {
-      padding: 28px;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-    }
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(10,50,120,0.28), 0 1.5px 0 rgba(255,255,255,0.7) inset;
-    }
-    .project-thumb {
-      width: 100%; height: 140px;
-      border-radius: var(--radius-sm);
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      border: 1px solid rgba(255,255,255,0.5);
-      position: relative;
-      overflow: hidden;
-    }
-    .project-thumb::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 50%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, transparent 100%);
-    }
-    .project-card:nth-child(1) .project-thumb { background: linear-gradient(135deg, #c8e8ff 0%, #7ab8e8 100%); }
-    .project-card:nth-child(2) .project-thumb { background: linear-gradient(135deg, #b8d8ff 0%, #5a8fc8 100%); }
-    .project-card:nth-child(3) .project-thumb { background: linear-gradient(135deg, #d0eaff 0%, #6aaad8 100%); }
-    .project-title { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
-    .project-desc { font-size: 0.87rem; color: var(--text-light); line-height: 1.65; margin-bottom: 16px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 7px; }
-    .tag {
-      font-size: 0.75rem; font-weight: 600;
-      padding: 3px 12px; border-radius: 20px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.6) 0%, rgba(180,220,255,0.4) 100%);
-      border: 1px solid rgba(100,170,230,0.4);
-      color: var(--mid);
-      box-shadow: 0 1px 4px rgba(10,50,120,0.1), 0 0.5px 0 rgba(255,255,255,0.8) inset;
-    }
-    .project-arrow {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 18px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--sky);
-      letter-spacing: 0.04em;
-    }
-    .project-arrow svg { transition: transform 0.2s; }
-    .project-card:hover .project-arrow svg { transform: translateX(4px); }
-
-    /* CONTACT */
-    #contact { padding: 44px 48px; text-align: center; }
-    .contact-grid {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-    .contact-item {
-      padding: 14px 28px;
-      border-radius: 40px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(200,230,255,0.35) 100%);
-      border: 1.5px solid rgba(255,255,255,0.7);
-      box-shadow: 0 3px 12px rgba(10,50,120,0.15), 0 1px 0 rgba(255,255,255,0.8) inset;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--navy);
-      text-decoration: none;
-      transition: all 0.18s;
-      position: relative;
-      overflow: hidden;
-    }
-    .contact-item::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 50%;
-      background: linear-gradient(180deg, rgba(255,255,255,0.35) 0%, transparent 100%);
-      border-radius: 40px 40px 0 0;
-    }
-    .contact-item:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(10,50,120,0.22), 0 1px 0 rgba(255,255,255,0.9) inset; }
-    .contact-icon { font-size: 1.1rem; }
-
-    footer {
-      text-align: center;
-      padding: 28px 20px 40px;
-      font-size: 0.8rem;
-      color: var(--text-light);
-      opacity: 0.7;
-      position: relative;
-      z-index: 1;
-    }
-
-    @media (max-width: 700px) {
-      #hero { flex-direction: column; padding: 32px 28px; }
-      .hero-avatar { width: 120px; height: 120px; font-size: 3.5rem; }
-      .nav-links { display: none; }
-      #contact { padding: 32px 24px; }
-      .timeline-item { grid-template-columns: 1fr; }
-      .timeline-dot { display: none; }
-    }
-
-    .hero-avatar {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        border: 3px solid rgba(255,255,255,0.85);
-        box-shadow: 0 4px 28px rgba(10,50,120,0.25), 0 1px 0 rgba(255,255,255,0.9) inset;
-        background: linear-gradient(135deg, #c8e4f8 0%, #7ab8e8 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 5rem;
-        flex-shrink: 0;
-        overflow: hidden;
-    }
-
-    .avatar-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -460,7 +23,7 @@
       <li><a href="#contact" data-i18n="nav_contact"></a></li>
     </ul>
   </div>
-</nav>
+</nav>  
 
 <main>
 
@@ -491,7 +54,6 @@
         <p class="skill-name" data-i18n="skill_linux_name"></p>
         <p class="skill-desc" data-i18n="skill_linux_desc"></p>
         <br>
-        <p class="skill-desc" data-i18n="skill_learnmore"></p>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">🌎</span>
@@ -499,7 +61,6 @@
         <p class="skill-desc" data-i18n="skill_webdev_desc"></p>
         <div class="skill-bar-wrap"><div class="skill-bar" style="width:60%"></div></div>
         <br>
-        <p class="skill-desc" data-i18n="skill_learnmore"></p>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">🎨</span>
@@ -507,7 +68,6 @@
         <p class="skill-desc" data-i18n="skill_webproj_desc"></p>
         <div class="skill-bar-wrap"><div class="skill-bar" style="width:75%"></div></div>
         <br>
-        <p class="skill-desc" data-i18n="skill_learnmore"></p>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">🛠️</span>
@@ -515,7 +75,6 @@
         <p class="skill-desc" data-i18n="skill_reveng_desc"></p>
         <div class="skill-bar-wrap"><div class="skill-bar" style="width:25%"></div></div>
         <br>
-        <p class="skill-desc" data-i18n="skill_learnmore"></p>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">⛓️‍💥</span>
@@ -523,7 +82,6 @@
         <p class="skill-desc" data-i18n="skill_git_desc"></p>
         <div class="skill-bar-wrap"><div class="skill-bar" style="width:55%"></div></div>
         <br>
-        <p class="skill-desc" data-i18n="skill_learnmore"></p>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">👨‍💻</span>
@@ -531,21 +89,18 @@
         <p class="skill-desc" data-i18n="skill_program_desc"></p>
         <div class="skill-bar-wrap"><div class="skill-bar" style="width:75%"></div></div>
         <br>
-        <p class="skill-desc" data-i18n="skill_learnmore"></p>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon"><span class="fi fi-gb"></span> <span class="fi fi-de"></span></span>
         <p class="skill-name">English & Deutsch</p>
         <p class="skill-desc" data-i18n="skill_gbde_desc"></p>
         <br>
-        <p class="skill-desc" data-i18n="skill_learnmore"></p>
       </div>
       <div class="glass skill-card">
-        <span class="skill-icon"><span class="fi fi-cn"></span> <span class="fi fi-fi"></span></span>
-        <p class="skill-name">中文 & Suomen kieli</p>
+        <span class="skill-icon"><span class="fi fi-fi"></span></span>
+        <p class="skill-name">Suomen kieli</p>
         <p class="skill-desc" data-i18n="skill_cnfi_desc"></p>
         <br>
-        <p class="skill-desc" data-i18n="skill_learnmore_HSK"></p>
       </div>
     </div>
 
@@ -593,7 +148,7 @@
     <p class="section-label" data-i18n="proj_label"></p>
     <h2 class="section-title" data-i18n="proj_title"></h2>
     <div class="projects-grid">
-      <a href="projekt-shopflow.html" class="glass project-card">
+      <a href="projekt-opyleo.html" class="glass project-card">
         <div class="project-thumb">
             <img src="opyleo.jpg" alt="Opyleo">
         </div>
@@ -627,6 +182,27 @@
           </svg>
         </div>
         </a>
+    </div>
+  </section>
+
+  <section id="kursy">
+    <p class="section-title" data-i18n="kurs_title"></p>
+    <div class="projects-grid">
+      <a href="#" class="glass project-card">
+        <div class="project-thumb">
+            <!-- <img src="opyleo.jpg" alt="Opyleo"> -->
+        </div>
+        <p class="project-title" data-i18n="kurs1_title"></p>
+        <p class="project-desc" data-i18n="kurs1_desc"></p>
+        <div class="skill-bar-wrap"><div class="skill-bar" style="width:55%"></div></div>
+      </a>      
+      <!-- <a href="#" class="glass project-card">
+        <div class="project-thumb">
+            <img src="opyleo.jpg" alt="Opyleo">
+        </div>
+        <p class="project-title" data-i18n="kurs1_title"></p>
+        <p class="project-desc" data-i18n="kurs1_desc"></p>
+      </a> -->
     </div>
   </section>
 
