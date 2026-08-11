@@ -152,8 +152,8 @@ const TRANSLATIONS = {
     sub_cta_contact:  "✉ Napisz do mnie",
 
     kurs_title: "Kursy i certyfikaty",
-    kurs1_title: "Tu pojawią się kursy",
-    kurs1_desc: "i cerytfikaty.",
+    kurs1_title: "Learn Git Branching — interaktywny kurs Git",
+    kurs1_desc: "https://learngitbranching.js.org",
   },
 
   // ── ENGLISH ───────────────────────────────────────────────
