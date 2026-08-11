@@ -27,7 +27,7 @@ const TRANSLATIONS = {
     hero_label:    "CV - Portfolio",
     hero_name:     "Piotr<br>Gawron",
     hero_role:     "Programista | Pasjonat języków obcych",
-    hero_tagline:  "Od zawsze interesuję się tym, jak działa komputer. Lubię grzebać<br> w disassemblerach i analizować kod napisany przez profesjonalistów. Hobbystycznie zajmuję sie również tworzeniem stron internetowych<br>i ich projektowaniem. W wolnym czasie uczę się języka chińskiego.",
+    hero_tagline:  "Od zawsze interesuję się tym, jak działa komputer. Lubię grzebać<br> w disassemblerach i analizować kod napisany przez profesjonalistów. Hobbystycznie zajmuję sie również tworzeniem stron internetowych<br>i ich projektowaniem. W wolnym czasie uczę się języków obcych.",
     hero_btn_contact:  "✉ Skontaktuj się",
     hero_btn_projects: "📁 Zobacz projekty",
 
