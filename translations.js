@@ -18,6 +18,7 @@ const TRANSLATIONS = {
     nav_experience:  "Doświadczenie",
     nav_projects:    "Projekty",
     nav_contact:     "Kontakt",
+    nav_print:       "🖨️ Drukuj CV",
     nav_back:        "Wróć do projektów",
 
     nav_logo_gesly: "Cofnij",
@@ -84,6 +85,9 @@ const TRANSLATIONS = {
     proj1_desc:  "<i>gru 2024–kwi 2025</i>",
     proj2_title: "Gesly - Komunikator P2P",
     proj2_desc:  "<i>Porzucony</i>",
+    proj3_title: "Metal Planner - Planowanie podróży komunikacją miejską",
+    proj3_desc:  "<i>2026 — obecnie</i>",
+    proj_see:    "Zobacz projekt",
 
     // CONTACT SECTION
     contact_label:    "Napisz do mnie",

@@ -21,9 +21,10 @@
       <li><a href="#experience" data-i18n="nav_experience"></a></li>
       <li><a href="#projects" data-i18n="nav_projects"></a></li>
       <li><a href="#contact" data-i18n="nav_contact"></a></li>
+      <li><button type="button" id="print-cv-btn" class="nav-print-btn" data-i18n="nav_print"></button></li>
     </ul>
   </div>
-</nav>  
+</nav>
 
 <main>
 
@@ -182,6 +183,22 @@
           </svg>
         </div>
         </a>
+      <a href="https://github.com/Metal-Pipe-Org/Metal-Planner" target="_blank" rel="noopener noreferrer" class="glass project-card">
+        <div class="project-thumb">🚋</div>
+        <p class="project-title" data-i18n="proj3_title"></p>
+        <p class="project-desc" data-i18n="proj3_desc"></p>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Transport</span>
+          <span class="tag">Planowanie podróży</span>
+        </div>
+        <div class="project-arrow">
+          <span data-i18n="proj_see"></span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -233,6 +250,9 @@
 <footer data-i18n="footer"></footer>
 
 <script src="translations.js"></script>
+<script>
+  document.getElementById('print-cv-btn').addEventListener('click', () => window.print());
+</script>
 
 </body>
 </html>
