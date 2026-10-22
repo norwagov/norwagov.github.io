@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — Piotr Gawron</title>
+  <title data-i18n="title_index">Piotr Gawron — Portfolio i CV</title>
+  <meta name="description" content="Piotr Gawron — student Informatyki Stosowanej na Politechnice Wrocławskiej. CV i portfolio: projekty webowe, Python, C++." />
+  <link rel="canonical" href="https://norwagov.github.io/" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:url" content="https://norwagov.github.io/" />
+  <meta property="og:title" content="Piotr Gawron — Portfolio i CV" />
+  <meta property="og:description" content="Student Informatyki Stosowanej (PWr). Projekty webowe, Python, C++." />
+  <meta property="og:image" content="https://norwagov.github.io/PFP.jpg" />
+  <meta name="twitter:card" content="summary" />
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"
@@ -14,29 +23,29 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo" data-i18n="nav_logo"></a>
+    <a href="#about" class="nav-logo" data-i18n="nav_logo">Piotr Gawron Portfolio</a>
     <ul class="nav-links">
-      <li><a href="#about" data-i18n="nav_about"></a></li>
-      <li><a href="#skills" data-i18n="nav_skills"></a></li>
-      <li><a href="#experience" data-i18n="nav_experience"></a></li>
-      <li><a href="#projects" data-i18n="nav_projects"></a></li>
-      <li><a href="#contact" data-i18n="nav_contact"></a></li>
-      <li><button type="button" id="print-cv-btn" class="nav-print-btn" data-i18n="nav_print"></button></li>
+      <li><a href="#about" data-i18n="nav_about">O mnie</a></li>
+      <li><a href="#skills" data-i18n="nav_skills">Umiejętności</a></li>
+      <li><a href="#education" data-i18n="nav_experience">Edukacja</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Projekty</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Kontakt</a></li>
+      <li><button type="button" id="print-cv-btn" class="nav-print-btn" data-i18n="nav_print">🖨️ Drukuj CV</button></li>
     </ul>
   </div>
 </nav>
 
 <main>
 
-  <section id="about" class="glass" style="display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:40px;padding:52px 52px 48px;margin-bottom:60px;">
+  <section id="about" class="glass hero">
     <div class="hero-left">
-      <p class="section-label" data-i18n="hero_label"></p>
-      <h1 class="hero-name" data-i18n="hero_name"></h1>
-      <p class="hero-role" data-i18n="hero_role"></p>
-      <p class="hero-tagline" data-i18n="hero_tagline"></p>
+      <p class="section-label" data-i18n="hero_label">CV - Portfolio</p>
+      <h1 class="hero-name" data-i18n="hero_name">Piotr<br>Gawron</h1>
+      <p class="hero-role" data-i18n="hero_role">Student Informatyki Stosowanej na Politechnice Wrocławskiej</p>
+      <p class="hero-tagline" data-i18n="hero_tagline">Od zawsze interesuję się tym, jak działa komputer. Lubię grzebać w disassemblerach i analizować kod napisany przez profesjonalistów. Hobbystycznie zajmuję się również tworzeniem stron internetowych i ich projektowaniem. W wolnym czasie uczę się języków obcych.</p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary" data-i18n="hero_btn_contact"></a>
-        <a href="#projects" class="btn btn-secondary" data-i18n="hero_btn_projects"></a>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero_btn_contact">✉ Skontaktuj się</a>
+        <a href="#projects" class="btn btn-secondary" data-i18n="hero_btn_projects">📁 Zobacz projekty</a>
       </div>
     </div>
     <div class="hero-avatar">
@@ -45,100 +54,101 @@
   </section>
 
   <section id="skills">
-    <p class="section-label" data-i18n="skills_label"></p>
-    <h2 class="section-title" data-i18n="skills_title"></h2>
-    
-    <h3 class="skills-subtitle" data-i18n="skills_hard_subtitle"></h3>
-    <div class="skills-grid" style="margin-bottom: 40px;">
+    <p class="section-label" data-i18n="skills_label">Kompetencje</p>
+    <h2 class="section-title" data-i18n="skills_title">Umiejętności i pasje</h2>
+
+    <div class="skills-grid">
       <div class="glass skill-card">
         <span class="skill-icon">⚙️</span>
-        <p class="skill-name" data-i18n="skill_linux_name"></p>
-        <p class="skill-desc" data-i18n="skill_linux_desc"></p>
-        <br>
+        <p class="skill-name" data-i18n="skill_linux_name">Linux</p>
+        <p class="skill-desc" data-i18n="skill_linux_desc">Umiem zarządzać systemem Linux, obsługiwać terminal z wysoką skutecznością w rozwiązywaniu problemów z systemem.</p>
+        <div class="tags skill-tags">
+          <span class="tag" data-i18n="skill_linux_tag1">Terminal</span>
+        </div>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">🌎</span>
-        <p class="skill-name" data-i18n="skill_webdev_name"></p>
-        <p class="skill-desc" data-i18n="skill_webdev_desc"></p>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:60%"></div></div>
-        <br>
+        <p class="skill-name" data-i18n="skill_webdev_name">Programowanie webowe</p>
+        <p class="skill-desc" data-i18n="skill_webdev_desc">Miałem styczność z frameworkami takimi jak Astro, Laravel, Flask. <br>Zdecydowanie lepiej jednak idzie mi wdrażanie wyglądu strony niż backend.</p>
+        <div class="tags skill-tags">
+          <span class="tag">Flask</span>
+          <span class="tag" data-i18n="skill_webdev_tag2">Frameworki webowe</span>
+        </div>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">🎨</span>
-        <p class="skill-name" data-i18n="skill_webproj_name"></p>
-        <p class="skill-desc" data-i18n="skill_webproj_desc"></p>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:75%"></div></div>
-        <br>
+        <p class="skill-name" data-i18n="skill_webproj_name">Figma <i>(Projektowanie stron)</i></p>
+        <p class="skill-desc" data-i18n="skill_webproj_desc">Umiem obsługiwać Figmę i tworzyć projekty graficzne stron internetowych.</p>
+        <div class="tags skill-tags">
+          <span class="tag" data-i18n="skill_webproj_tag1">UX design</span>
+        </div>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">🛠️</span>
-        <p class="skill-name" data-i18n="skill_reveng_name"></p>
-        <p class="skill-desc" data-i18n="skill_reveng_desc"></p>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:25%"></div></div>
-        <br>
+        <p class="skill-name" data-i18n="skill_reveng_name">Podstawy Reverse Engineeringu</p>
+        <p class="skill-desc" data-i18n="skill_reveng_desc">Traktuję to bardziej, jako pasję. Interesuję się tym, jak działają programy i ciekawi mnie działanie procesora i rejestrów. Potrafię w podstawowym stopniu obsługiwać <b>Ghidrę</b> i <b>IDA Free</b> w celu analizy kodu napisanego w <b>C/Objective-C/C++</b>.</p>
+        <div class="tags skill-tags">
+          <span class="tag">IDA</span>
+          <span class="tag">Ghidra</span>
+          <span class="tag">C++</span>
+          <span class="tag">Frida</span>
+        </div>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">⛓️‍💥</span>
-        <p class="skill-name" data-i18n="skill_git_name"></p>
-        <p class="skill-desc" data-i18n="skill_git_desc"></p>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:55%"></div></div>
-        <br>
+        <p class="skill-name" data-i18n="skill_git_name">Git i GitHub</p>
+        <p class="skill-desc" data-i18n="skill_git_desc">Swobodnie poruszam się w tym środowisku i używam go praktycznie codziennie.</p>
+        <div class="tags skill-tags">
+          <a class="tag tag--link" href="https://learngitbranching.js.org" target="_blank" rel="noopener noreferrer" data-i18n="skill_git_course">🎓 Ukończony kurs: Learn Git Branching</a>
+        </div>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon">👨‍💻</span>
-        <p class="skill-name" data-i18n="skill_program_name"></p>
-        <p class="skill-desc" data-i18n="skill_program_desc"></p>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:75%"></div></div>
-        <br>
+        <p class="skill-name" data-i18n="skill_program_name">Programowanie</p>
+        <p class="skill-desc" data-i18n="skill_program_desc">Sprawnie posługuję się językami <b>Python</b> i <b>C++</b>.<br>W ramach ćwiczeń, staram się rozwiązywać problemy na <a href='https://leetcode.com/u/norwagov/' target='_blank' rel='noopener noreferrer'>LeetCode</a>.</p>
+        <div class="tags skill-tags">
+          <span class="tag" data-i18n="skill_program_tag1">Programowanie obiektowe (OOP)</span>
+        </div>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon"><span class="fi fi-gb"></span> <span class="fi fi-de"></span></span>
-        <p class="skill-name">English & Deutsch</p>
-        <p class="skill-desc" data-i18n="skill_gbde_desc"></p>
-        <br>
+        <p class="skill-name" data-i18n="skill_gbde_name">Angielski i niemiecki</p>
+        <p class="skill-desc" data-i18n="skill_gbde_desc">Umiem posługiwać się <b>językiem angielskim</b> w stopniu zaawansowanym. <br><b>Język niemiecki</b> umiem zdecydowanie słabiej, ale nie powinno być u mnie problemu ze zrozumieniem tekstu dotyczącego moich zainteresowań, albo branży. Rozumiem również wiele instrukcji, czy dokumentacji napisanych po niemiecku.</p>
+        <div class="tags skill-tags">
+          <span class="tag" data-i18n="skill_gbde_tag1">Angielski B2/C1 (brak certyfikatu)</span>
+          <span class="tag" data-i18n="skill_gbde_tag2">Niemiecki B1 (brak certyfikatu)</span>
+        </div>
       </div>
       <div class="glass skill-card">
         <span class="skill-icon"><span class="fi fi-fi"></span></span>
-        <p class="skill-name">Suomen kieli</p>
-        <p class="skill-desc" data-i18n="skill_cnfi_desc"></p>
-        <br>
-      </div>
-    </div>
-
-    <h3 class="skills-subtitle" data-i18n="skills_soft_subtitle"></h3>
-    <div class="skills-grid">
-      <div class="glass skill-card">
-        <span class="skill-icon">📐</span>
-        <p class="skill-name" data-i18n="skill_projS_name"></p>
-        <p class="skill-desc" data-i18n="skill_projS_desc"></p>
-      </div>
-      <div class="glass skill-card">
-        <span class="skill-icon">🔐</span>
-        <p class="skill-name" data-i18n="skill_asertS_name"></p>
-        <p class="skill-desc" data-i18n="skill_asertS_desc"></p>
+        <p class="skill-name" data-i18n="skill_fi_name">Fiński</p>
+        <p class="skill-desc" data-i18n="skill_fi_desc"><b>Języka fińskiego</b> uczę się od <i>czerwca 2025</i> roku i umiem go na tyle, aby porozumieć się w nieco wyższym stopniu niż podstawowym. Długa droga nauki przede mną, ale szybko progresuję i mam doświadczenie w uczeniu się języków.</p>
+        <div class="tags skill-tags">
+          <span class="tag" data-i18n="skill_fi_tag1">Fiński A2</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="experience">
-    <p class="section-label" data-i18n="exp_label"></p>
-    <h2 class="section-title" data-i18n="exp_title"></h2>
+  <section id="education">
+    <p class="section-label" data-i18n="exp_label">Studia i szkoła</p>
+    <h2 class="section-title" data-i18n="exp_title">Edukacja</h2>
     <div class="timeline">
       <div class="glass timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <p class="timeline-period" data-i18n="exp1_period"></p>
-          <p class="timeline-role" data-i18n="exp1_role"></p>
-          <p class="timeline-company" data-i18n="exp1_company"></p>
+          <p class="timeline-period" data-i18n="exp1_period">2026 — obecnie</p>
+          <p class="timeline-role" data-i18n="exp1_role">Informatyka Stosowana</p>
+          <p class="timeline-company" data-i18n="exp1_company">Politechnika Wrocławska — Wydział Informatyki i Telekomunikacji</p>
           <p class="timeline-desc" data-i18n="exp1_desc"></p>
         </div>
       </div>
       <div class="glass timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <p class="timeline-period" data-i18n="exp2_period"></p>
-          <p class="timeline-role" data-i18n="exp2_role"></p>
-          <p class="timeline-company" data-i18n="exp2_company"></p>
+          <p class="timeline-period" data-i18n="exp2_period">2022 — 2026</p>
+          <p class="timeline-role" data-i18n="exp2_role">Klasa matematyczno-fizyczno-informatyczna</p>
+          <p class="timeline-company" data-i18n="exp2_company">Akademickie Liceum Ogólnokształcące Politechniki Wrocławskiej</p>
           <p class="timeline-desc" data-i18n="exp2_desc"></p>
         </div>
       </div>
@@ -146,22 +156,22 @@
   </section>
 
   <section id="projects">
-    <p class="section-label" data-i18n="proj_label"></p>
-    <h2 class="section-title" data-i18n="proj_title"></h2>
+    <p class="section-label" data-i18n="proj_label">Realizacje</p>
+    <h2 class="section-title" data-i18n="proj_title">Projekty</h2>
     <div class="projects-grid">
       <a href="projekt-opyleo.html" class="glass project-card">
         <div class="project-thumb">
             <img src="opyleo.jpg" alt="Opyleo">
         </div>
-        <p class="project-title" data-i18n="proj1_title"></p>
-        <p class="project-desc" data-i18n="proj1_desc"></p>
+        <p class="project-title" data-i18n="proj1_title">Opyleo - Przeprojektowanie wyglądu strony internetowej</p>
+        <p class="project-desc" data-i18n="proj1_desc"><i>gru 2024–kwi 2025</i></p>
         <div class="tags">
           <span class="tag">Astro</span>
           <span class="tag">Figma</span>
           <span class="tag">Web Design</span>
         </div>
         <div class="project-arrow">
-          <span data-i18n="proj_see"></span>
+          <span data-i18n="proj_see">Zobacz projekt</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -169,31 +179,33 @@
       </a>
       <a href="projekt-gesly.html" class="glass project-card">
         <div class="project-thumb">🛜</div>
-        <p class="project-title" data-i18n="proj2_title"></p>
-        <p class="project-desc" data-i18n="proj2_desc"></p>
+        <p class="project-title" data-i18n="proj2_title">Gesly - Komunikator P2P</p>
+        <p class="project-desc" data-i18n="proj2_desc"><i>Porzucony</i><br>Przy tym projekcie nauczyłem się komunikacji z API.</p>
         <div class="tags">
           <span class="tag">Python</span>
-          <span class="tag">Komunikacja</span>
+          <span class="tag" data-i18n="tag_messaging">Komunikacja</span>
           <span class="tag">API</span>
         </div>
         <div class="project-arrow">
-          <span data-i18n="proj_see"></span>
+          <span data-i18n="proj_see">Zobacz projekt</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
-        </a>
+      </a>
       <a href="https://github.com/Metal-Pipe-Org/Metal-Planner" target="_blank" rel="noopener noreferrer" class="glass project-card">
         <div class="project-thumb">🚋</div>
-        <p class="project-title" data-i18n="proj3_title"></p>
-        <p class="project-desc" data-i18n="proj3_desc"></p>
+        <p class="project-title" data-i18n="proj3_title">Metal Planner - Planowanie podróży komunikacją miejską</p>
+        <div class="project-desc" data-i18n="proj3_desc"><i>2026 — obecnie</i><p>Zespołowa aplikacja do planowania podróży komunikacją miejską, tworzona metodą vibe codingu — kod powstaje we współpracy z asystentami AI, a my odpowiadamy za pomysły, integrację i testowanie. Pracujemy na gałęziach i pull requestach. Mój wkład:</p><ul><li><b>Lokalizacja autobusów na żywo</b> — pozycje pojazdów pobierane z otwartych danych miejskich (API) i pokazywane w aplikacji.</li><li><b>Zapisane miejsca</b> — możliwość zapisania lokalizacji jako „Dom”, „Szkoła” itp., aby szybko zaplanować do niej podróż.</li></ul></div>
         <div class="tags">
           <span class="tag">Python</span>
           <span class="tag">Transport</span>
-          <span class="tag">Planowanie podróży</span>
+          <span class="tag" data-i18n="tag_trip">Planowanie podróży</span>
+          <span class="tag" data-i18n="tag_opendata">Otwarte dane</span>
+          <span class="tag">API</span>
         </div>
         <div class="project-arrow">
-          <span data-i18n="proj_see"></span>
+          <span data-i18n="proj_see">Zobacz projekt</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M3 8h10M9 4l4 4-4 4" stroke="#4a9fd4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -202,43 +214,24 @@
     </div>
   </section>
 
-  <section id="kursy">
-    <p class="section-title" data-i18n="kurs_title"></p>
-    <div class="projects-grid">
-      <a href="#" class="glass project-card">
-        <div class="project-thumb">
-            <img src='GB.png' alt='Learn Git Branching'>
-        </div>
-        <p class="project-title" data-i18n="kurs1_title"></p>
-        <p class="project-desc" data-i18n="kurs1_desc"></p>
-        <div class="skill-bar-wrap"><div class="skill-bar" style="width:100%"></div></div>
-      </a>      
-      <!-- <a href="#" class="glass project-card">
-        <div class="project-thumb">
-            <img src="opyleo.jpg" alt="Opyleo">
-        </div>
-        <p class="project-title" data-i18n="kurs1_title"></p>
-        <p class="project-desc" data-i18n="kurs1_desc"></p>
-      </a> -->
-    </div>
-  </section>
-
   <section>
     <div class="glass" id="contact">
-      <p class="section-label" data-i18n="contact_label"></p>
-      <h2 class="section-title" style="margin-bottom:8px" data-i18n="contact_title"></h2>
-      <p style="font-size:0.95rem;color:var(--text-light);margin-bottom:4px" data-i18n="contact_subtitle"></p>
+      <p class="section-label" data-i18n="contact_label">Napisz do mnie</p>
+      <h2 class="section-title contact-title" data-i18n="contact_title">Kontakt</h2>
+      <p class="contact-subtitle" data-i18n="contact_subtitle">Otwarty na nowe wyzwania i ciekawe projekty.</p>
       <div class="contact-grid">
-        <a href="mailto:jan.kowalski@email.com" class="contact-item">
+        <a href="mailto:norwagov@piotrgawron.pl" class="contact-item">
           <span class="contact-icon">✉️</span> norwagov@piotrgawron.pl
         </a>
-        <a href="tel:+48600000000" class="contact-item">
-          <span class="contact-icon">📞</span> +48 50* *** **8
+        <!-- TODO: wpisz prawdziwy numer w obu miejscach i odkomentuj
+        <a href="tel:+48XXXXXXXXX" class="contact-item">
+          <span class="contact-icon">📞</span> +48 XXX XXX XXX
         </a>
-        <a href="https://www.linkedin.com/in/piotrgawron-nrvg/" target="_blank" class="contact-item">
+        -->
+        <a href="https://www.linkedin.com/in/piotrgawron-nrvg/" target="_blank" rel="noopener noreferrer" class="contact-item">
           <span class="contact-icon">💼</span> LinkedIn
         </a>
-        <a href="https://github.com/norwagov" target="_blank" class="contact-item">
+        <a href="https://github.com/norwagov" target="_blank" rel="noopener noreferrer" class="contact-item">
           <span class="contact-icon">🐙</span> GitHub
         </a>
       </div>
@@ -247,7 +240,7 @@
 
 </main>
 
-<footer data-i18n="footer"></footer>
+<footer data-i18n="footer">Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w tym dokumencie na potrzeby obecnych i przyszłych procesów rekrutacyjnych, zgodnie z rozporządzeniem (UE) 2016/679 (RODO).</footer>
 
 <script src="translations.js"></script>
 <script>

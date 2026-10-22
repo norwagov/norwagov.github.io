@@ -1,7 +1,9 @@
 // ============================================================
 //  translations.js — Language definitions for the portfolio
 //  Supported languages: pl (Polish), en (English)
-//  To add a new language: copy one lang block and translate.
+//  Polish text is also written directly in the HTML files, so the
+//  page works without JavaScript. After editing a Polish string here,
+//  run `node scripts/sync-pl-html.js` to copy it into the HTML.
 //  To add a new key: add it to ALL languages to avoid missing text.
 // ============================================================
 
@@ -10,84 +12,87 @@ const TRANSLATIONS = {
   // ── POLISH ────────────────────────────────────────────────
   pl: {
 
+    // PAGE TITLES
+    title_index:  "Piotr Gawron — Portfolio i CV",
+    title_opyleo: "Opyleo — Piotr Gawron",
+    title_gesly:  "Gesly — Piotr Gawron",
+
     // NAV
     nav_logo:        "Piotr Gawron Portfolio",
     nav_logo_opyleo: "Cofnij",
     nav_about:       "O mnie",
-    nav_skills:      "Umiejętności",    
-    nav_experience:  "Doświadczenie",
+    nav_skills:      "Umiejętności",
+    nav_experience:  "Edukacja",
     nav_projects:    "Projekty",
     nav_contact:     "Kontakt",
     nav_print:       "🖨️ Drukuj CV",
-    nav_back:        "Wróć do projektów",
 
     nav_logo_gesly: "Cofnij",
-    gesly_desc: "<br>Gesly miał być komunikatorem P2P, dzięki któremu użytkownicy mogliby się porozumiewać bez potrzeby połączenia do serwera. Projekt został porzucony, ale <a href='https://github.com/NanosoftTeam/gesly/tree/main/utils'>kod</a> dalej można przeglądać.",
+    gesly_desc: "<br>Gesly miał być komunikatorem P2P, dzięki któremu użytkownicy mogliby się porozumiewać bez potrzeby połączenia do serwera. Pracując nad nim, nauczyłem się komunikacji z API. Projekt został porzucony, ale <a href='https://github.com/NanosoftTeam/gesly/tree/main/utils' target='_blank' rel='noopener noreferrer'>kod</a> dalej można przeglądać.",
 
     // HERO
     hero_label:    "CV - Portfolio",
     hero_name:     "Piotr<br>Gawron",
-    hero_role:     "Programista | Pasjonat języków obcych",
-    hero_tagline:  "Od zawsze interesuję się tym, jak działa komputer. Lubię grzebać<br> w disassemblerach i analizować kod napisany przez profesjonalistów. Hobbystycznie zajmuję sie również tworzeniem stron internetowych<br>i ich projektowaniem. W wolnym czasie uczę się języków obcych.",
+    hero_role:     "Student Informatyki Stosowanej na Politechnice Wrocławskiej",
+    hero_tagline:  "Od zawsze interesuję się tym, jak działa komputer. Lubię grzebać w disassemblerach i analizować kod napisany przez profesjonalistów. Hobbystycznie zajmuję się również tworzeniem stron internetowych i ich projektowaniem. W wolnym czasie uczę się języków obcych.",
     hero_btn_contact:  "✉ Skontaktuj się",
     hero_btn_projects: "📁 Zobacz projekty",
-
-    // Przykład dla języka polskiego:
-    skills_hard_subtitle: "Umiejętności twarde",
-    skills_soft_subtitle: "Umiejętności miękkie",
-    skill_comm_name: "Komunikacja i współpraca",
-    skill_comm_desc: "Efektywna praca w zespołach cross-funkcjonalnych i jasne przekazywanie wiedzy technicznej.",
 
     // SKILLS SECTION
     skills_label: "Kompetencje",
     skills_title: "Umiejętności i pasje",
     skill_linux_name:   "Linux",
     skill_linux_desc:   "Umiem zarządzać systemem Linux, obsługiwać terminal z wysoką skutecznością w rozwiązywaniu problemów z systemem.",
+    skill_linux_tag1:   "Terminal",
     skill_webdev_name:  "Programowanie webowe",
     skill_webdev_desc:  "Miałem styczność z frameworkami takimi jak Astro, Laravel, Flask. <br>Zdecydowanie lepiej jednak idzie mi wdrażanie wyglądu strony niż backend.",
+    skill_webdev_tag2:  "Frameworki webowe",
     skill_webproj_name:    "Figma <i>(Projektowanie stron)</i>",
     skill_webproj_desc:    "Umiem obsługiwać Figmę i tworzyć projekty graficzne stron internetowych.",
+    skill_webproj_tag1:    "UX design",
     skill_reveng_name:        "Podstawy Reverse Engineeringu",
-    skill_reveng_desc:        "Traktuję to bardziej, jako pasję. Interesuję się tym, jak działają programy i ciekawi mnie działanie procesora i rejestrów. Potrafię w podstawowym stopniu obsługiwać <b>Ghidrę</b> i <b>IDĘ Free</b> w celu analizy kodu napisanego w <b>C/Objective-C/C++</b>.",
-    skill_git_name:        "Git i Github",
+    skill_reveng_desc:        "Traktuję to bardziej, jako pasję. Interesuję się tym, jak działają programy i ciekawi mnie działanie procesora i rejestrów. Potrafię w podstawowym stopniu obsługiwać <b>Ghidrę</b> i <b>IDA Free</b> w celu analizy kodu napisanego w <b>C/Objective-C/C++</b>.",
+    skill_git_name:        "Git i GitHub",
     skill_git_desc:        "Swobodnie poruszam się w tym środowisku i używam go praktycznie codziennie.",
+    skill_git_course:      "🎓 Ukończony kurs: Learn Git Branching",
     skill_program_name:       "Programowanie",
-    skill_program_desc:       "Sprawnie posługuję się językami <b>Python</b> i <b>C++</b>.<br>W ramach ćwiczeń, staram się rozwiązywać problemy na <a href='https://leetcode.com/u/norwagov/'>LeetCode</a>.",
-    skill_gbde_desc:       "Umiem posługiwać się <b>językiem angielskim</b> w stopniu zaawansowanym. <br><b>Język niemiecki</b> umiem zdcydowanie słabiej, ale nie powinno być u mnie problemu ze zrozumieniem tekstu dotyczącego moich zainteresowań, albo branży. Rozumiem również wiele instrukcji, czy dokumentacji napisanych po niemiecku.",
-    skill_cnfi_desc:       "<b>Języka fińskiego</b> uczę się od <i>czerwca 2025</i> roku i umiem go na tyle, aby porozumieć się w nieco wyższym stopniu niż podstawowym. Długa droga nauki przede mną, ale szybko progresuję i mam doświadczenie w uczeniu się jezyków.",  
+    skill_program_desc:       "Sprawnie posługuję się językami <b>Python</b> i <b>C++</b>.<br>W ramach ćwiczeń, staram się rozwiązywać problemy na <a href='https://leetcode.com/u/norwagov/' target='_blank' rel='noopener noreferrer'>LeetCode</a>.",
+    skill_program_tag1:    "Programowanie obiektowe (OOP)",
+    skill_gbde_name:       "Angielski i niemiecki",
+    skill_gbde_desc:       "Umiem posługiwać się <b>językiem angielskim</b> w stopniu zaawansowanym. <br><b>Język niemiecki</b> umiem zdecydowanie słabiej, ale nie powinno być u mnie problemu ze zrozumieniem tekstu dotyczącego moich zainteresowań, albo branży. Rozumiem również wiele instrukcji, czy dokumentacji napisanych po niemiecku.",
+    skill_gbde_tag1:       "Angielski B2/C1 (brak certyfikatu)",
+    skill_gbde_tag2:       "Niemiecki B1 (brak certyfikatu)",
+    skill_fi_name:         "Fiński",
+    skill_fi_desc:         "<b>Języka fińskiego</b> uczę się od <i>czerwca 2025</i> roku i umiem go na tyle, aby porozumieć się w nieco wyższym stopniu niż podstawowym. Długa droga nauki przede mną, ale szybko progresuję i mam doświadczenie w uczeniu się języków.",
+    skill_fi_tag1:         "Fiński A2",
 
-    skill_projS_name: "Zarzadzanie projektem",
-    skill_projS_desc: "Umiejętności zarządzania projektami, w tym planowanie i wydzielanie ról. Mając wizję sądzę, że potrafię przekazać ją współpracownikom i przekonać ich do niej.",
+    opyleo_desc: "<br>Jest to (niestety już nieistniejąca) strona internetowa, na której ludzie mogli kupować książki. Moim zadaniem było przeprojektowanie jej wyglądu. Aby zobaczyć efekt naszej pracy (backendem zajmowali się współpracownicy), wystarczy wejść na <a href='https://grzes-business.github.io/Opyleo-Landing-Page/' target='_blank' rel='noopener noreferrer'>tę stronę</a>, zbadać element i zmniejszyć rozmiar okna przeglądarki mniej więcej do rozmiaru smartfona, jako że strona była projektowana na urządzenia mobilne.",
 
-    opyleo_desc: "<br>Jest to (niestety już nieistniejąca) strona internetowa, na której ludzie mogli kupować książki. Moim zadaniem było przeprojektowanie jej wyglądu. Aby zobaczyć efekt naszej pracy (backendem zajmowali się współpracownicy), wystarczy wejść na <a href='https://grzes-business.github.io/Opyleo-Landing-Page/'>tę stronę</a>, zbadać element i zmniejszyć rozmiar okna przeglądarki mniej więcej do rozmiaru smartfona, jako że strona była projektowana na urządzenia mobilne.",
-
-    skill_asertS_name: "Asertywność",
-    skill_asertS_desc: "Umiem powiedzieć <b>'nie'</b> i nie mam problemu z wyrażaniem swojego zdania, nawet jeśli jest ono zupełnie inne niz zdanie innych.<br>Warto jednak pamietać, że podczas pracy nad czymś, czego nie do końca znamy, lepiej jest posłuchać osób bardziej wykwalifikowanych.",
-
-    skill_learnmore: "<b>Dowiedz się więcej!</b>",
-    skill_learnmore_HSK: "<b>Dowiedz się więcej o HSK!</b>",
-
-    // EXPERIENCE SECTION
-    exp_label: "Historia zawodowa i edukacyjna",
-    exp_title: "Doświadczenie i szkoły",
+    // EDUCATION SECTION
+    exp_label: "Studia i szkoła",
+    exp_title: "Edukacja",
     exp1_period:  "2026 — obecnie",
-    exp1_role:    "Politechnika Wrocławska - Wydział Informatyki i Telekomunikacji",
-    exp1_company: "Informatyka Stosowana",
+    exp1_role:    "Informatyka Stosowana",
+    exp1_company: "Politechnika Wrocławska — Wydział Informatyki i Telekomunikacji",
     exp1_desc:    "",
     exp2_period:  "2022 — 2026",
-    exp2_role:    "Akademickie Liceum Ogólnokształcące Politechniki Wrocławskiej",
-    exp2_company: "Uczeń na kierunku matematyczno-fizyczno-informatycznym.",
+    exp2_role:    "Klasa matematyczno-fizyczno-informatyczna",
+    exp2_company: "Akademickie Liceum Ogólnokształcące Politechniki Wrocławskiej",
     exp2_desc:    "",
+
     // PROJECTS SECTION
     proj_label: "Realizacje",
     proj_title: "Projekty",
     proj1_title: "Opyleo - Przeprojektowanie wyglądu strony internetowej",
     proj1_desc:  "<i>gru 2024–kwi 2025</i>",
     proj2_title: "Gesly - Komunikator P2P",
-    proj2_desc:  "<i>Porzucony</i>",
+    proj2_desc:  "<i>Porzucony</i><br>Przy tym projekcie nauczyłem się komunikacji z API.",
     proj3_title: "Metal Planner - Planowanie podróży komunikacją miejską",
-    proj3_desc:  "<i>2026 — obecnie</i>",
+    proj3_desc:  "<i>2026 — obecnie</i><p>Zespołowa aplikacja do planowania podróży komunikacją miejską, tworzona metodą vibe codingu — kod powstaje we współpracy z asystentami AI, a my odpowiadamy za pomysły, integrację i testowanie. Pracujemy na gałęziach i pull requestach. Mój wkład:</p><ul><li><b>Lokalizacja autobusów na żywo</b> — pozycje pojazdów pobierane z otwartych danych miejskich (API) i pokazywane w aplikacji.</li><li><b>Zapisane miejsca</b> — możliwość zapisania lokalizacji jako „Dom”, „Szkoła” itp., aby szybko zaplanować do niej podróż.</li></ul>",
     proj_see:    "Zobacz projekt",
+    tag_messaging: "Komunikacja",
+    tag_trip:      "Planowanie podróży",
+    tag_opendata:  "Otwarte dane",
 
     // CONTACT SECTION
     contact_label:    "Napisz do mnie",
@@ -96,151 +101,92 @@ const TRANSLATIONS = {
 
     // FOOTER
     footer: "Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w tym dokumencie na potrzeby obecnych i przyszłych procesów rekrutacyjnych, zgodnie z rozporządzeniem (UE) 2016/679 (RODO).",
-
-// I hereby give consent for my personal data included in this document to be processed for the purposes of current and future recruitment processes, in accordance with Regulation (EU) 2016/679 (GDPR).
-
-    // ── SUBPAGE (projekt-shopflow.html) ──────────────────────
-    sub_breadcrumb_portfolio: "Portfolio",
-    sub_breadcrumb_projects:  "Projekty",
-
-    sub_label:    "Projekt — E-commerce",
-    sub_title:    "ShopFlow<br>Platforma e-commerce",
-    sub_subtitle: "Pełne rozwiązanie sklepowe dla średnich i dużych przedsiębiorstw — od koszyka po panel logistyczny i analitykę w czasie rzeczywistym.",
-
-    sub_meta_date:   "📅 2023 — 2024",
-    sub_meta_role:   "👤 Rola: Lead Developer",
-    sub_meta_client: "🏢 Klient: RetailGroup S.A.",
-
-    sub_stat1_num:   "50k",
-    sub_stat1_label: "zamówień<br>miesięcznie",
-    sub_stat2_num:   "−40%",
-    sub_stat2_label: "czasu ładowania<br>strony",
-    sub_stat3_num:   "99.8%",
-    sub_stat3_label: "dostępność<br>systemu",
-
-    sub_desc_label: "Opis projektu",
-    sub_desc_p1:    "ShopFlow to kompletna platforma sprzedażowa stworzona od podstaw dla RetailGroup S.A. — sieci 120 sklepów stacjonarnych, która chciała zbudować silny kanał online.",
-    sub_desc_p2:    "Projekt obejmował front-end sklepu, panel administracyjny dla menedżerów kategorii, moduł magazynowy, integrację z systemem płatności Stripe oraz wbudowaną analitykę z dashboardem real-time dla zarządu.",
-    sub_desc_p3:    "Całość wdrożona na infrastrukturze AWS z automatycznym skalowaniem — system bez zakłóceń obsłużył Black Friday z 8-krotnym pikiem ruchu.",
-
-    sub_challenges_label: "Wyzwania i rozwiązania",
-    sub_ch1_title: "Wydajność przy dużym ruchu",
-    sub_ch1_desc:  "Wdrożenie Redis jako warstwy cache'ującej katalog produktów skróciło czas odpowiedzi API o 70%.",
-    sub_ch2_title: "Bezpieczeństwo płatności",
-    sub_ch2_desc:  "Tokenizacja kart przez Stripe Elements, audyt OWASP Top 10, testy penetracyjne przed launchem.",
-    sub_ch3_title: "Synchronizacja stanów magazynowych",
-    sub_ch3_desc:  "Kolejki RabbitMQ zapewniające spójność między ERP klienta a sklepem bez opóźnień.",
-    sub_ch4_title: "Mobile-first UX",
-    sub_ch4_desc:  "68% ruchu z urządzeń mobilnych wymagało przemodelowania całej ścieżki zakupowej i optymalizacji LCP.",
-
-    sub_details_label:    "Szczegóły techniczne",
-    sub_detail_frontend:  "Front-end",
-    sub_detail_backend:   "Back-end",
-    sub_detail_db:        "Baza danych",
-    sub_detail_cache:     "Cache",
-    sub_detail_payments:  "Płatności",
-    sub_detail_hosting:   "Hosting",
-    sub_detail_cicd:      "CI/CD",
-
-    sub_role_label:       "Moja rola",
-    sub_role_position:    "Stanowisko",
-    sub_role_team:        "Zespół",
-    sub_role_duration:    "Czas trwania",
-    sub_role_method:      "Metodologia",
-    sub_role_team_val:    "5 osób",
-    sub_role_duration_val:"14 miesięcy",
-
-    sub_cta_title:    "Zainteresowany podobnym projektem?",
-    sub_cta_subtitle: "Chętnie porozmawiam o Twoich potrzebach.",
-    sub_cta_github:   "🐙 GitHub",
-    sub_cta_contact:  "✉ Napisz do mnie",
-
-    kurs_title: "Kursy i certyfikaty",
-    kurs1_title: "Learn Git Branching — interaktywny kurs Git",
-    kurs1_desc: "https://learngitbranching.js.org",
   },
 
   // ── ENGLISH ───────────────────────────────────────────────
   en: {
+
+    // PAGE TITLES
+    title_index:  "Piotr Gawron — Portfolio & CV",
+    title_opyleo: "Opyleo — Piotr Gawron",
+    title_gesly:  "Gesly — Piotr Gawron",
 
     // NAV
     nav_logo:        "Piotr Gawron Portfolio",
     nav_logo_opyleo: "Back",
     nav_about:       "About me",
     nav_skills:      "Skills",
-    nav_experience:  "Experience",
+    nav_experience:  "Education",
     nav_projects:    "Projects",
     nav_contact:     "Contact",
     nav_print:       "🖨️ Print CV",
-    nav_back:        "Back to projects",
 
     nav_logo_gesly: "Back",
-    gesly_desc: "<br>Gesly was meant to be a P2P messenger that would let users communicate without needing a connection to a server. The project was abandoned, but the <a href='https://github.com/NanosoftTeam/gesly/tree/main/utils'>code</a> can still be browsed.",
+    gesly_desc: "<br>Gesly was meant to be a P2P messenger that would let users communicate without needing a connection to a server. While working on it, I learned how to communicate with APIs. The project was abandoned, but the <a href='https://github.com/NanosoftTeam/gesly/tree/main/utils' target='_blank' rel='noopener noreferrer'>code</a> can still be browsed.",
 
     // HERO
     hero_label:    "CV - Portfolio",
     hero_name:     "Piotr<br>Gawron",
-    hero_role:     "Developer | Foreign language enthusiast",
-    hero_tagline:  "I've always been interested in how computers work. I enjoy digging<br> through disassemblers and analyzing code written by professionals. As a hobby, I also build websites<br>and design them. In my free time I learn foreign languages.",
+    hero_role:     "Applied Computer Science student at Wrocław University of Science and Technology",
+    hero_tagline:  "I've always been interested in how computers work. I enjoy digging through disassemblers and analyzing code written by professionals. As a hobby, I also build and design websites. In my free time I learn foreign languages.",
     hero_btn_contact:  "✉ Get in touch",
     hero_btn_projects: "📁 View projects",
-
-    // Example for English:
-    skills_hard_subtitle: "Hard skills",
-    skills_soft_subtitle: "Soft skills",
-    skill_comm_name: "Communication and teamwork",
-    skill_comm_desc: "Effective work in cross-functional teams and clear communication of technical knowledge.",
 
     // SKILLS SECTION
     skills_label: "Competencies",
     skills_title: "Skills and passions",
     skill_linux_name:   "Linux",
     skill_linux_desc:   "I can administer a Linux system and use the terminal effectively to troubleshoot system problems.",
+    skill_linux_tag1:   "Terminal",
     skill_webdev_name:  "Web development",
     skill_webdev_desc:  "I've worked with frameworks such as Astro, Laravel and Flask. <br>That said, I'm definitely better at implementing a site's look than at back-end work.",
+    skill_webdev_tag2:  "Web frameworks",
     skill_webproj_name:    "Figma <i>(Website design)</i>",
     skill_webproj_desc:    "I can use Figma to create graphic designs for websites.",
+    skill_webproj_tag1:    "UX design",
     skill_reveng_name:        "Reverse engineering basics",
     skill_reveng_desc:        "I treat this more as a passion. I'm interested in how programs work and curious about how the processor and registers operate. I can use <b>Ghidra</b> and <b>IDA Free</b> at a basic level to analyze code written in <b>C/Objective-C/C++</b>.",
     skill_git_name:        "Git and GitHub",
     skill_git_desc:        "I'm comfortable in this environment and use it practically every day.",
+    skill_git_course:      "🎓 Completed course: Learn Git Branching",
     skill_program_name:       "Programming",
-    skill_program_desc:       "I'm proficient in <b>Python</b> and <b>C++</b>.<br>As practice, I try to solve problems on <a href='https://leetcode.com/u/norwagov/'>LeetCode</a>.",
+    skill_program_desc:       "I'm proficient in <b>Python</b> and <b>C++</b>.<br>As practice, I try to solve problems on <a href='https://leetcode.com/u/norwagov/' target='_blank' rel='noopener noreferrer'>LeetCode</a>.",
+    skill_program_tag1:    "Object-oriented programming (OOP)",
+    skill_gbde_name:       "English & German",
     skill_gbde_desc:       "I can use <b>English</b> at an advanced level. <br>My <b>German</b> is definitely weaker, but I shouldn't have trouble understanding text related to my interests or field. I also understand a lot of instructions and documentation written in German.",
-    skill_cnfi_desc:       "I've been learning <b>Finnish</b> since <i>June 2025</i> and know it well enough to communicate at a slightly above basic level. I still have a long way to go, but I'm progressing quickly and have experience learning languages.",
+    skill_gbde_tag1:       "English B2/C1 (no certificate)",
+    skill_gbde_tag2:       "German B1 (no certificate)",
+    skill_fi_name:         "Finnish",
+    skill_fi_desc:         "I've been learning <b>Finnish</b> since <i>June 2025</i> and know it well enough to communicate at a slightly above basic level. I still have a long way to go, but I'm progressing quickly and have experience learning languages.",
+    skill_fi_tag1:         "Finnish A2",
 
-    skill_projS_name: "Project management",
-    skill_projS_desc: "Project management skills, including planning and assigning roles. When I have a vision, I believe I can communicate it to collaborators and win them over to it.",
+    opyleo_desc: "<br>This is a (sadly now defunct) website where people could buy books. My task was to redesign its look. To see the result of our work (the back end was handled by collaborators), just visit <a href='https://grzes-business.github.io/Opyleo-Landing-Page/' target='_blank' rel='noopener noreferrer'>this page</a>, inspect the element and shrink the browser window down to roughly smartphone size, since the site was designed for mobile devices.",
 
-    opyleo_desc: "<br>This is a (sadly now defunct) website where people could buy books. My task was to redesign its look. To see the result of our work (the back end was handled by collaborators), just visit <a href='https://grzes-business.github.io/Opyleo-Landing-Page/'>this page</a>, inspect the element and shrink the browser window down to roughly smartphone size, since the site was designed for mobile devices.",
-
-    skill_asertS_name: "Assertiveness",
-    skill_asertS_desc: "I can say <b>'no'</b> and have no trouble expressing my opinion, even when it's completely different from everyone else's.<br>That said, it's worth remembering that when working on something you don't fully understand, it's better to listen to more qualified people.",
-
-    skill_learnmore: "<b>Learn more!</b>",
-    skill_learnmore_HSK: "<b>Learn more about HSK!</b>",
-
-    // EXPERIENCE SECTION
-    exp_label: "Work and education history",
-    exp_title: "Experience and education",
+    // EDUCATION SECTION
+    exp_label: "University and school",
+    exp_title: "Education",
     exp1_period:  "2026 — present",
-    exp1_role:    "Wrocław University of Science and Technology - Faculty of Computer Science and Telecommunications",
-    exp1_company: "Applied Computer Science",
+    exp1_role:    "Applied Computer Science",
+    exp1_company: "Wrocław University of Science and Technology — Faculty of Computer Science and Telecommunications",
     exp1_desc:    "",
     exp2_period:  "2022 — 2026",
-    exp2_role:    "Academic High School of Wrocław University of Science and Technology",
-    exp2_company: "Student in the mathematics-physics-computer science profile.",
+    exp2_role:    "Mathematics, physics and computer science class",
+    exp2_company: "Academic High School of Wrocław University of Science and Technology",
     exp2_desc:    "",
+
     // PROJECTS SECTION
     proj_label: "Portfolio",
     proj_title: "Projects",
     proj1_title: "Opyleo - Website redesign",
     proj1_desc:  "<i>Dec 2024–Apr 2025</i>",
     proj2_title: "Gesly - P2P messenger",
-    proj2_desc:  "<i>Abandoned</i>",
+    proj2_desc:  "<i>Abandoned</i><br>Working on this project, I learned how to communicate with APIs.",
     proj3_title: "Metal Planner - Public transport trip planning",
-    proj3_desc:  "<i>2026 — present</i>",
+    proj3_desc:  "<i>2026 — present</i><p>A team-built app for planning public transport journeys, developed through vibe coding — the code is written together with AI assistants, while we are responsible for the ideas, integration and testing. We work with branches and pull requests. My contributions:</p><ul><li><b>Live bus locations</b> — vehicle positions fetched from the city's open data (API) and shown in the app.</li><li><b>Saved places</b> — users can save a location as “Home”, “School”, etc. to quickly plan a trip there.</li></ul>",
     proj_see:    "View project",
+    tag_messaging: "Messaging",
+    tag_trip:      "Trip planning",
+    tag_opendata:  "Open data",
 
     // CONTACT SECTION
     contact_label:    "Get in touch",
@@ -249,66 +195,6 @@ const TRANSLATIONS = {
 
     // FOOTER
     footer: "I hereby give consent for my personal data included in this document to be processed for the purposes of current and future recruitment processes, in accordance with Regulation (EU) 2016/679 (GDPR).",
-
-    // ── SUBPAGE (projekt-shopflow.html) ──────────────────────
-    sub_breadcrumb_portfolio: "Portfolio",
-    sub_breadcrumb_projects:  "Projects",
-
-    sub_label:    "Project — E-commerce",
-    sub_title:    "ShopFlow<br>E-commerce Platform",
-    sub_subtitle: "A complete retail solution for medium and large businesses — from the cart to the logistics panel and real-time analytics.",
-
-    sub_meta_date:   "📅 2023 — 2024",
-    sub_meta_role:   "👤 Role: Lead Developer",
-    sub_meta_client: "🏢 Client: RetailGroup S.A.",
-
-    sub_stat1_num:   "50k",
-    sub_stat1_label: "orders<br>per month",
-    sub_stat2_num:   "−40%",
-    sub_stat2_label: "page load<br>time",
-    sub_stat3_num:   "99.8%",
-    sub_stat3_label: "system<br>uptime",
-
-    sub_desc_label: "Project description",
-    sub_desc_p1:    "ShopFlow is a complete sales platform built from scratch for RetailGroup S.A. — a chain of 120 brick-and-mortar stores that wanted to build a strong online channel.",
-    sub_desc_p2:    "The project covered the storefront, an admin panel for category managers, a warehouse module, Stripe payment integration, and built-in analytics with a real-time dashboard for management.",
-    sub_desc_p3:    "The whole system runs on AWS infrastructure with auto-scaling — it handled Black Friday with an 8x traffic spike without any disruption.",
-
-    sub_challenges_label: "Challenges and solutions",
-    sub_ch1_title: "Performance under heavy traffic",
-    sub_ch1_desc:  "Introducing Redis as a caching layer for the product catalogue cut API response time by 70%.",
-    sub_ch2_title: "Payment security",
-    sub_ch2_desc:  "Card tokenisation via Stripe Elements, an OWASP Top 10 audit, and penetration testing before launch.",
-    sub_ch3_title: "Inventory synchronisation",
-    sub_ch3_desc:  "RabbitMQ queues ensuring consistency between the client's ERP and the storefront with no delays.",
-    sub_ch4_title: "Mobile-first UX",
-    sub_ch4_desc:  "68% of traffic came from mobile devices, which required redesigning the entire purchase flow and optimising LCP.",
-
-    sub_details_label:    "Technical details",
-    sub_detail_frontend:  "Front-end",
-    sub_detail_backend:   "Back-end",
-    sub_detail_db:        "Database",
-    sub_detail_cache:     "Cache",
-    sub_detail_payments:  "Payments",
-    sub_detail_hosting:   "Hosting",
-    sub_detail_cicd:      "CI/CD",
-
-    sub_role_label:       "My role",
-    sub_role_position:    "Position",
-    sub_role_team:        "Team",
-    sub_role_duration:    "Duration",
-    sub_role_method:      "Methodology",
-    sub_role_team_val:    "5 people",
-    sub_role_duration_val:"14 months",
-
-    sub_cta_title:    "Interested in a similar project?",
-    sub_cta_subtitle: "I'd love to talk about your needs.",
-    sub_cta_github:   "🐙 GitHub",
-    sub_cta_contact:  "✉ Contact me",
-
-    kurs_title: "Courses and certificates",
-    kurs1_title: "Learn Git Branching — interactive Git course",
-    kurs1_desc: "https://learngitbranching.js.org",
   },
 
 };
@@ -322,8 +208,16 @@ const TRANSLATIONS = {
   const SUPPORTED   = Object.keys(TRANSLATIONS);
   const DEFAULT     = "pl";
 
+  // localStorage can throw in private mode or with blocked site data
+  function readStored() {
+    try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
+  }
+  function writeStored(lang) {
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  }
+
   function getLang() {
-    const stored = localStorage.getItem(STORAGE_KEY);
+    const stored = readStored();
     if (stored && SUPPORTED.includes(stored)) return stored;
     const browser = (navigator.language || "").slice(0, 2).toLowerCase();
     return SUPPORTED.includes(browser) ? browser : DEFAULT;
@@ -331,7 +225,7 @@ const TRANSLATIONS = {
 
   function setLang(lang) {
     if (!SUPPORTED.includes(lang)) return;
-    localStorage.setItem(STORAGE_KEY, lang);
+    writeStored(lang);
     applyLang(lang);
   }
 
@@ -342,7 +236,10 @@ const TRANSLATIONS = {
     // Translate every element that has data-i18n attribute
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
-      if (t[key] !== undefined) {
+      if (t[key] === undefined) return;
+      if (el.tagName === "TITLE") {
+        document.title = t[key];
+      } else {
         // Use innerHTML to support <br> in names etc.
         el.innerHTML = t[key];
       }
@@ -368,6 +265,7 @@ const TRANSLATIONS = {
 
     SUPPORTED.forEach(lang => {
       const btn = document.createElement("button");
+      btn.type = "button";
       btn.className  = "lang-btn";
       btn.dataset.lang = lang;
       btn.textContent  = lang.toUpperCase();
